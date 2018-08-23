@@ -13,6 +13,11 @@ export class GenericService {
     .pipe(map(res => res.json()));
   }
 
+  getById(id){
+    return this.http.get(this.url + id)
+    .pipe(map(res => res.json()));
+  }
+
   post(object){
     return this.http.post(this.url, object)
     .pipe(map(res => res.json()));
