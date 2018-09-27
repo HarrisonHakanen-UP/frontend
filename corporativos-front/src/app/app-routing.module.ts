@@ -7,7 +7,6 @@ import { RhComponent } from './rh/rh.component';
 import { VendasComponent } from './vendas/vendas.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
-import { VendasComponent } from './manufatura/manufatura.component';
 
 const routes: Routes = [
   {
@@ -17,23 +16,23 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: ProdutosComponent
-  }
+  },
   {
     path: 'manufatura',
     component: ManufaturaComponent
-  }
+  },
   {
     path: 'rh',
     component: RhComponent
-  }
+  },
   {
     path: 'vendas',
     component: VendasComponent
-  }
+  },
   {
     path: 'inventario',
     component: InventarioComponent
-  }
+  },
   {
     path: 'pessoas',
     component: PessoasComponent
