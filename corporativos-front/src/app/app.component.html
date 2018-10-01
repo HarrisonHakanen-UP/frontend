@@ -1,10 +1,44 @@
-<ul>
-  <li><a routerLink="">Home</a></li>
-  <li><a routerLink="inventario">Inventário</a></li>
-  <li><a routerLink="manufatura">Manufatura</a></li>
-  <li><a routerLink="pessoas">Pessoas</a></li>
-  <li><a routerLink="produtos">Produtos</a></li>
-  <li><a routerLink="rh">RH</a></li>
-  <li><a routerLink="vendas">Vendas</a></li>
-</ul>
+<nav>
+  <div class="nav-wrapper">
+    <!-- <a routerLink="" class="brand-logo">Logo</a> -->
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a routerLink="">
+          <i class="material-icons right">home</i>Home
+        </a>
+      </li>
+      <li>
+          <a routerLink="inventario">
+            <i class="material-icons right">archive</i>Inventário
+          </a>
+      </li>
+      <li>
+          <a routerLink="manufatura">
+            <i class="material-icons right">view_module</i>Manufatura
+          </a>
+      </li>
+      <li>
+          <a routerLink="pessoas">
+            <i class="material-icons right">person</i>Pessoas
+          </a>
+      </li>
+      <li>
+          <a routerLink="produtos">
+            <i class="material-icons right">shopping_cart</i>Produtos
+          </a>
+      </li>
+      <li>
+          <a routerLink="rh">
+            <i class="material-icons right">business</i>Rh
+          </a>
+      </li> 
+      <li>
+          <a routerLink="vendas">
+            <i class="material-icons right">call_missed_outgoing</i>Vendas
+          </a>
+      </li>                                    
+    </ul>
+  </div>
+</nav>
+
 <router-outlet></router-outlet>
