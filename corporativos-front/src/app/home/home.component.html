@@ -4,11 +4,20 @@
   </div>
 </div>
 <div class="container color-light">
-  <div class="col">
+  <div class="input-field col">
     <form>
-      <input type="text" class="txt" name="item" placeholder="Login">
-      <input type="text" class="txt" name="item" placeholder="Senha">
+      <div class="input-field col">
+          <i class="material-icons prefix">account_circle</i>
+        <label for="Login">Login</label>
+        <input id="Login" type="text" class="validate">
+      </div>
+      <div class="input-field col">
+          <i class="material-icons prefix">lock_open</i>
+        <input type="password" class="validate">
+        <label for="password">Senha</label>
+      </div>
       <input type="submit" class="btn" value="Entrar">
+      
     </form>
   </div>
-</div>     
+</div>
