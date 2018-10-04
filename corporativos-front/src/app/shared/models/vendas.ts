@@ -1,12 +1,9 @@
-export class Produto {
+export class Vendas {
 
-  public Nome: string;
-  public NumeroProduto: string;
-  public FazerBandeira: boolean;
-  public ProdutosAcabadosBandeira: boolean;
-  public Descricao: string;
-  public Categoria: string;
-  public Quantidade: number;
+  public name: string;
+  public height: string;
+  public mass: number;
+  public hair_color: string;
 
     // constructor(nome: string, numeroProduto: string,
     //             fazerBandeira: boolean, produtosAcabadosBandeira: boolean) {
