@@ -1,12 +1,19 @@
-<div class="container color-dark">
+<div class="container">
   <div class="col">
-    <p>Vendas</p>
-  </div>
-</div>
-<div class="container color-light">
-  <div class="col">
-    <form>
-      <input type="submit" class="btn" value="Listar">
-    </form>
+    <h2>Produtos</h2>
+    <table>
+        <tr>
+          <th>Nome</th>
+          <th>Número</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+        </tr>
+        <tr *ngFor="let venda of vendas">
+          <td> {{ vendas.name }} </td>
+          <td> {{ produto.height }} </td>
+          <td> {{ produto.mass }} </td>
+          <td> {{ produto.hair_color }} </td>
+        </tr>
+      </table>
   </div>
 </div>
