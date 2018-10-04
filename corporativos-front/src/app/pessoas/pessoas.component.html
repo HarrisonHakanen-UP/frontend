@@ -6,12 +6,28 @@
 <div class="container color-light">
   <div class="col">
     <form>
-      <input type="text" class="txt" name="item" placeholder="Nome">
-      <input type="submit" class="btn" value="Buscar">
-      <input type="text" class="txt" name="item" placeholder="Nome">
-      <input type="text" class="txt" name="item" placeholder="Endereço">
-      <input type="text" class="txt" name="item" placeholder="Telefone">
-      <input type="text" class="txt" name="item" placeholder="CPF">
+        <div class="input-field col">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" class="validate">
+            <label for="ID">Nome</label>
+          </div>
+          <input type="submit" class="btn" value="Buscar">
+          <div class="input-field col">
+              <i class="material-icons prefix">edit_location</i>
+            <input type="text" class="validate">
+            <label for="Endereço">Endereço</label>
+          </div>
+          <div class="input-field col">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label for="icon_telephone">Telefone</label>
+          </div>
+          <div class="input-field col">
+              <i class="material-icons prefix">fingerprint</i>
+            <input type="text" class="validate">
+            <label for="CPF">CPF</label>
+          </div>
+      
       <input type="submit" class="btn" value="Cadastrar">
     </form>
   </div>

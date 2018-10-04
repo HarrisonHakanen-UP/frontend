@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/materialize/css/materialize.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/materialize/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
