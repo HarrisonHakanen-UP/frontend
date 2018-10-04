@@ -27,29 +27,26 @@
         </tr>
       </table>
   </div>
-  
-
 </div>
+
 <div class="container color-light">
   <div class="col">
     <form>
         <div class="input-field col">
             <input type="text" class="validate">
             <label for="ID">ID</label>
-          </div>
+        </div>
           <input type="submit" class="btn" value="Buscar Produtos">
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Nome do Produto">Nome do Produto</label>
-          </div>
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Quantidade">Quantidade</label>
-          </div>
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Descrição">Descrição</label>
-          </div>
+    </form>
+    <form (ngSubmit)="postProduto()">
+      <div class="input-field col">
+        <input [(ngModel)]="produtoPost.Nome" type="text" class="txt" name="item">
+        <label for="Nome do Produto">Nome do Produto</label>
+      </div>
+      <div class="input-field col">
+        <input [(ngModel)]="produtoPost.NumeroProduto" type="text" class="txt" name="item">
+        <label for="Nome do Produto">Número do Produto</label>
+      </div>
       <input type="submit" class="btn" value="Cadastrar Produto">
     </form>
   </div>
