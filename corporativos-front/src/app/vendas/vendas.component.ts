@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
 import { VendasService} from '../shared/services/vendas.service';
 import { Vendas } from '../shared/models/vendas';
 
@@ -10,11 +9,11 @@ import { Vendas } from '../shared/models/vendas';
 })
 export class VendasComponent implements OnInit {
 
-vendas: Venda[];
+vendas: Vendas[];
   constructor(private _vendasService: VendasService) { }
 
   ngOnInit() {
-    this.getVendas()
+    //this.getVendas()
   }
 //   getVendas(){
 //     this._vendasService.get()
@@ -24,4 +23,4 @@ vendas: Venda[];
 //       () => console.log(this.vendas)
 //     )
 //   },
-// }
+ }

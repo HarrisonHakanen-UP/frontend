@@ -8,6 +8,6 @@ import {GenericService} from '../services/generic.service';
 export class VendasService {
 
   constructor(http: Http) {
-    super(http, "https://swapi.co/api/people/1")
+    // super(http, "https://swapi.co/api/people/1")
   }
 }
