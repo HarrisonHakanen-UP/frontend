@@ -1,10 +1,7 @@
-import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { map } from 'rxjs/operators';
-@Injectable({
-  providedIn: 'root'
-})
-export class GenericService {
+
+export abstract class GenericService {
 
   constructor(private http: Http, private url: string) { }
 
