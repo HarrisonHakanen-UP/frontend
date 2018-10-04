@@ -5,10 +5,9 @@ import {GenericService} from '../services/generic.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutosService extends GenericService{
+export class VendasService {
 
   constructor(http: Http) {
-    super(http, "http://localhost:3002/produto/listar")
-    super(http, "http://localhost:3002/produto/cadastrarProduto")
+    super(http, "https://swapi.co/api/people/1")
   }
 }
