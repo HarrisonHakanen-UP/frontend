@@ -1,19 +1,39 @@
-<div class="container color-dark">
+<div class="container">
   <div class="col">
-    <p>Produtos</p>
+    <h2>Produtos</h2>
+    <table>
+        <tr>
+          <th>Nome</th>
+          <th>Número</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Quantidade</th>
+        </tr>
+        <tr *ngFor="let produto of produtos">
+          <td> {{ produto.Nome }} </td>
+          <td> {{ produto.NumeroProduto }} </td>
+          <td> {{ produto.Descricao }} </td>
+          <td> {{ produto.Categoria }} </td>
+          <td> {{ produto.Quantidade }} </td>
+        </tr>
+      </table>
   </div>
 </div>
+
 <div class="container color-light">
   <div class="col">
-    <form>
-        <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="ID">ID</label>
-          </div>
-          <input type="submit" class="btn" value="Buscar Produtos">
+    <form (ngSubmit)="postProduto()">
           <div class="input-field col">
             <input type="text" class="validate">
             <label for="Nome do Produto">Nome do Produto</label>
+          </div>
+          <div class="input-field col">
+            <input type="text" class="validate">
+            <label for="Número">Número</label>
+          </div>
+          <div class="input-field col">
+            <input type="text" class="validate">
+            <label for="Descrição">Descrição</label>
           </div>
           <div class="input-field col">
             <input type="text" class="validate">
@@ -21,8 +41,9 @@
           </div>
           <div class="input-field col">
             <input type="text" class="validate">
-            <label for="Descrição">Descrição</label>
+            <label for="Categoria">Categoria</label>
           </div>
+
       <input type="submit" class="btn" value="Cadastrar Produto">
     </form>
   </div>

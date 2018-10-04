@@ -1,28 +1,46 @@
-<div class="container color-dark">
+<div class="container">
   <div class="col">
-    <p>Manufatura</p>
+    <h2>Produtos</h2>
+    <table>
+        <tr>
+          <th>Nome</th>
+          <th>Número</th>
+          <th>Bandeira</th>
+          <th>Produto Acabado</th>
+        </tr>
+        <tr *ngFor="let produto of produtos">
+          <td> {{ produto.Nome }} </td>
+          <td> {{ produto.NumeroProduto }} </td>
+          <div *ngIf="produto.fazerBandeira; then thenBlock1 else elseBlock1"></div>
+          <ng-template #thenBlock1><td>Verdadeiro</td></ng-template>
+          <ng-template #elseBlock1><td>Falso</td></ng-template>
+
+          <div *ngIf="produto.produtosAcabadosBandeira; then thenBlock2 else elseBlock2"></div>
+          <ng-template #thenBlock2><td>Verdadeiro</td>Verdadeiro</ng-template>
+          <ng-template #elseBlock2><td>Falso</td></ng-template>
+        </tr>
+      </table>
   </div>
 </div>
+
 <div class="container color-light">
   <div class="col">
     <form>
         <div class="input-field col">
             <input type="text" class="validate">
             <label for="ID">ID</label>
-          </div>
+        </div>
           <input type="submit" class="btn" value="Buscar Produtos">
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Nome do Produto">Nome do Produto</label>
-          </div>
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Quantidade">Quantidade</label>
-          </div>
-          <div class="input-field col">
-            <input type="text" class="validate">
-            <label for="Descrição">Descrição</label>
-          </div>
+    </form>
+    <form (ngSubmit)="postProduto()">
+      <div class="input-field col">
+        <input [(ngModel)]="produtoPost.Nome" type="text" class="txt" name="item">
+        <label for="Nome do Produto">Nome do Produto</label>
+      </div>
+      <div class="input-field col">
+        <input [(ngModel)]="produtoPost.NumeroProduto" type="text" class="txt" name="item">
+        <label for="Nome do Produto">Número do Produto</label>
+      </div>
       <input type="submit" class="btn" value="Cadastrar Produto">
     </form>
   </div>
