@@ -9,6 +9,7 @@ import { Produto } from '../shared/models/produto';
 export class ManufaturaComponent implements OnInit {
 
   produtos: Produto[];
+  produtoPost: Produto = new Produto;
   constructor(private _manufaturaService: ManufaturaService) { }
 
   ngOnInit() {
@@ -22,4 +23,12 @@ export class ManufaturaComponent implements OnInit {
       () => console.log(this.produtos)
     )
   }
+  postProduto(){
+    this._manufaturaService.post(this.produtoPost)
+    .subscribe(
+      data => console.log(data),
+      err => console.log(err)
+    )
+  }
+
 }

@@ -27,17 +27,22 @@
         </tr>
       </table>
   </div>
-  
-
 </div>
+
 <div class="container color-light">
   <div class="col">
     <form>
       <input type="text" class="txt" name="item" placeholder="ID">
       <input type="submit" class="btn" value="Buscar Produtos">
-      <input type="text" class="txt" name="item" placeholder="Nome do Produto">
-      <input type="text" class="txt" name="item" placeholder="Quantidade">
-      <input type="text" class="txt" name="item" placeholder="Descrição">
+    </form>
+    <h2></h2>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+
+    <form (ngSubmit)="postProduto()">
+      <input [(ngModel)]="produtoPost.Nome" type="text" class="txt" name="item" placeholder="Nome do Produto">
+      <input [(ngModel)]="produtoPost.NumeroProduto" type="text" class="txt" name="item" placeholder="Número do Produto">
       <input type="submit" class="btn" value="Cadastrar Produto">
     </form>
   </div>
